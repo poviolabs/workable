@@ -176,7 +176,7 @@ module Workable
     # @param  candidate_id [String] candidate id to create a comment for
     # @param  member_id    [String] id of the member that created the comment
     # @param  comment_body [String] body of the comment that will be created
-    def create_candidate_comment(candidate_id, member_id, comment_body, policy = [], attachment = nil)      
+    def create_candidate_comment(candidate_id, member_id, comment_text, policy = [], attachment = nil)      
       comment = { body: comment_text, policy: policy, attachment: attachment }
 
       post_request("candidates/#{candidate_id}/comments") do |request|
